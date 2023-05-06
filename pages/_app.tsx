@@ -1,6 +1,7 @@
 import { AppProps } from "next/app";
 import Head from "next/head";
 import { MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
 
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
@@ -8,7 +9,7 @@ export default function App(props: AppProps) {
   return (
     <>
       <Head>
-        <title>Page title</title>
+        <title>Lecturer Assignment Talentlytica | Vigar Rivai Putra</title>
         <link rel="shortcut icon" href="/favicon.svg" />
         <meta
           name="viewport"
@@ -19,11 +20,13 @@ export default function App(props: AppProps) {
       <MantineProvider
         withGlobalStyles
         withNormalizeCSS
-        theme={{
-          /** Put your mantine theme override here */
-          colorScheme: "dark",
-        }}
+        theme={
+          {
+            /** Put your mantine theme override here */
+          }
+        }
       >
+        <Notifications />
         <Component {...pageProps} />
       </MantineProvider>
     </>
